@@ -9,8 +9,9 @@ const toggleModal = () => {
 </script>
 <template>
    <div
-      class="tw-flex tw-w-full tw-flex-col tw-items-center tw-bg-weather-secondary tw-p-1">
-      <div class="tw-flex tw-w-full tw-items-center tw-justify-center">
+      class="tw-flex tw-w-full tw-flex-col tw-items-center tw-bg-weather-primary">
+      <div
+         class="tw-fixed tw-top-0 tw-flex tw-w-full tw-items-center tw-justify-center tw-bg-weather-secondary tw-p-1">
          <div class="tw-flex tw-w-[1000px] tw-items-center tw-justify-between">
             <div
                class="tw-group tw-flex tw-w-20 tw-cursor-pointer tw-flex-col tw-items-center">
@@ -35,14 +36,14 @@ const toggleModal = () => {
          </div>
       </div>
       <BaseModal :modalActive="modalActive" @close-modal="toggleModal">
-         <div class="text-black">
-            <h1 class="text-2xl mb-1">About:</h1>
-            <p class="mb-4">
+         <div class="tw-text-black">
+            <h1 class="mb-1 tw-text-2xl">About:</h1>
+            <span class="tw-mb-4">
                The Local Weather allows you to track the current and future
                weather of cities of your choosing.
-            </p>
-            <h2 class="text-2xl">How it works:</h2>
-            <ol class="list-decimal list-inside mb-4">
+            </span>
+            <h2 class="tw-text-2xl">How it works:</h2>
+            <ol class="tw-mb-4 tw-list-inside tw-list-decimal">
                <li>
                   Search for your city by entering the name into the search bar.
                </li>
@@ -57,18 +58,20 @@ const toggleModal = () => {
                </li>
             </ol>
 
-            <h2 class="text-2xl">Removing a city</h2>
-            <p>
+            <h2 class="tw-text-2xl">Removing a city :</h2>
+            <span>
                If you no longer wish to track a city, simply select the city
                within the home page. At the bottom of the page, there will be am
                option to delete the city.
-            </p>
+            </span>
          </div>
-         <button
-            @click="toggleModal"
-            class="tw-bg-weather-primary tw-p-1 tw-px-3 tw-text-white hover:tw-bg-[#05b3ec]">
-            Close
-         </button>
+         <div class="tw-flex tw-w-full tw-justify-center">
+            <button
+               @click="toggleModal"
+               class="tw-my-4 tw-rounded-md tw-bg-weather-primary tw-p-1 tw-px-3 tw-text-white hover:tw-bg-[#05b3ec]">
+               Close
+            </button>
+         </div>
       </BaseModal>
    </div>
 </template>
