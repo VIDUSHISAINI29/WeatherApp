@@ -281,7 +281,7 @@ const countries = [
                class="fouce:shadow-[0px_1px_0_0_#0d9dcd] tw-w-full tw-rounded-bl-md tw-rounded-tl-md tw-border-r-2 tw-border-weather-primary tw-bg-weather-secondary tw-px-2 tw-py-2 tw-font-bold tw-text-weather-primary focus:tw-border-weather-primary focus:tw-outline-none" />
             <button
                @click="getSearchResult"
-               class="tw-rounded-br-md tw-rounded-tr-md tw-bg-weather-secondary tw-px-2 tw-font-semibold tw-text-weather-primary">
+               class="tw-cursor-pointer tw-rounded-br-md tw-rounded-tr-md tw-bg-weather-secondary tw-px-2 tw-font-semibold tw-text-weather-primary">
                Search
             </button>
          </div>
